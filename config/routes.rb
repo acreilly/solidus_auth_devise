@@ -60,6 +60,7 @@ Spree::Core::Engine.routes.draw do
         get '/login', to: 'user_sessions#new', as: :login
         post '/login', to: 'user_sessions#create', as: :create_new_session
         get '/logout', to: 'user_sessions#destroy', as: :logout
+        post '/reset_password', to: 'user_passwords#create'
       end
     end
   end
